@@ -1,0 +1,11 @@
+{
+	"id": "autoescaper-plugin",
+	"name": "Autoescaper",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Autoescapes HTML characters from highlighted text",
+	"author": "BlueFootedBird",
+	"authorUrl": "https://github.com/BlueFootedBird/",
+	"fundingUrl": "https://buymeacoffee.com/bluefootedbird",
+	"isDesktopOnly": false
+}
