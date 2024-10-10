@@ -7,8 +7,8 @@ export default class HighlightEscapePlugin extends Plugin {
     // Add a command to escape highlighted text, no default hotkey
     this.addCommand({
       id: 'escape-html-characters',
-      name: 'Escape HTML Characters',
-      editorCallback: (editor: Editor) => {
+      name: 'Escape HTML characters',
+      editorCheckCallback: (editor: Editor) => {
         this.escapeHighlightedText(editor);
       },
     });
@@ -22,7 +22,7 @@ export default class HighlightEscapePlugin extends Plugin {
     if (selectedText.length > 0) {
       const escapedText = this.escapeHTML(selectedText);
       editor.replaceSelection(escapedText);
-      console.log(`Escaped highlighted text: ${escapedText}`);
+      console.log("No text selected, nothing replaced.");
     } else {
       console.log("No text selected, nothing replaced.");
     }
