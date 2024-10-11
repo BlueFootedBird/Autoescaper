@@ -8,7 +8,7 @@ export default class HighlightEscapePlugin extends Plugin {
     this.addCommand({
       id: 'escape-html-characters',
       name: 'Escape HTML characters',
-      editorCheckCallback: (editor: Editor) => {
+      editorCallback: (editor: Editor) => {
         this.escapeHighlightedText(editor);
       },
     });
@@ -22,7 +22,7 @@ export default class HighlightEscapePlugin extends Plugin {
     if (selectedText.length > 0) {
       const escapedText = this.escapeHTML(selectedText);
       editor.replaceSelection(escapedText);
-      console.log("No text selected, nothing replaced.");
+      console.log(`Escaped highlighted text: ${escapedText}`);
     } else {
       console.log("No text selected, nothing replaced.");
     }
